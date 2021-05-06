@@ -27,10 +27,11 @@
         text-align: center;
     }
 
-    .content-table th{
+    .content-table th {
         padding: 7px 15px;
         background-color: $primary;
     }
+
     .content-table td {
         padding: 7px 15px;
     }
@@ -53,5 +54,37 @@
 
     .content-table tbody tr.desative-row {
         color: $secondary-strong;
+    }
+
+    .bottomnav {
+        background-color: $primary;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 55px;
+        width: 100vw;
+
+        .content-info {
+            display: flex;
+            justify-content: center;
+            * {
+                color: $background;
+                margin-top: 15px;
+            }
+
+            .btn {
+                color: $background;
+                background-color: $secondary-strong;
+                margin-left: 50px;
+                border: 1px solid transparent;
+                padding: .375rem .75rem;
+                width: 100px;
+                height: 35px;
+                line-height: 1;
+                border-radius: .25rem;
+                margin-top: 10px;
+            }
+        }
     }
 }

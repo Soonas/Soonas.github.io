@@ -11,6 +11,10 @@
       <div class="table" v-if="showTable">
         <Table />
       </div>
+
+      <div class="navbar-bottom">
+        <NavbarBottom />
+      </div>
     </div>
   </div>
 </template>
@@ -19,10 +23,11 @@
 import { defineComponent } from "vue";
 import Table from "../../components/Body/Table.vue"
 import Title from "../../components/Header/Title.vue";
+import NavbarBottom from "../../components/Body/NavbarBottom.vue"
 
 export default defineComponent({
   name: "Index",
-  components: {Table, Title},
+  components: {Table, Title, NavbarBottom},
   props: {
     subtitle: {
       type: String,
