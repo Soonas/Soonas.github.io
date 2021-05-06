@@ -43,12 +43,12 @@ export default defineComponent({
   methods: {
     handleCalculate() {
       if (this.value < 300) {
-        alert("Valor mínimo para simulação: 300");
+        alert("Valor mínimo para simulação: R$300,00");
         return;
       }
 
       if (this.value > 10000) {
-        alert("Valor máximo para simulação: 10.000");
+        alert("Valor máximo para simulação: R$10.000,00");
         return;
       }
 
