@@ -1,23 +1,30 @@
 <template>
-  <div class="content"  >
-    <table class="content-table" v-for="item in items" :key="item.id"
-   :style="{'border' : checkedNames === 'radio-' + item.id ? 'solid 4px orange' : ''}"
+  <div class="content">
+    <table
+      class="content-table"
+      v-for="item in items"
+      :key="item.id"
+      :style="{
+        border: item.id == itemId ? 'solid 2px orange' : '',
+      }"
     >
       <thead>
         <tr>
-          <input type="radio" v-model="checkedNames" :value="'radio-' + item.id">
+          <th>
+            <input type="radio" name="radio" v-on:change="x(item)" />
+          </th>
           <th colspan="8">Tabela Padrão</th>
         </tr>
 
         <tr>
-          <th>Parcela </th>
+          <th>Parcela</th>
           <th>Juros Parcela</th>
           <th>Valor Parcela</th>
           <th>Valor Total</th>
           <th>Comissão Parceiro</th>
         </tr>
       </thead>
-      
+
       <tbody>
         <tr class="active-row" v-for="row in item.installments" :key="row.id">
           <td>{{ row.installments }}</td>
@@ -35,11 +42,19 @@
 import { defineComponent } from "@vue/composition-api";
 import mockData from "../../services/api/mockData";
 export default defineComponent({
+  props: {
+    itemId: Number,
+  },
   data() {
     return {
       items: mockData.rateTable,
-      checkedNames: false
+      checkedNames: false,
     };
+  },
+  methods: {
+    x: function (item) {
+      this.$emit("inputChanged", item);
+    },
   },
 });
 </script>

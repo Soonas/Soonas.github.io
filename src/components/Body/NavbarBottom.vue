@@ -1,8 +1,8 @@
 <template>
   <div class="content">
-    <div class="bottomnav" v-if="showNavBottom">
-      <div class="content-info">
-        <h4>Nome: &nbsp;Parcelas: &nbsp;Valor Parcela: R$</h4>
+    <div class="bottomnav">
+      <div class="content-info" >
+        <h4>Nome: {{item.name}} &nbsp;Parcelas: &nbsp;Valor Parcela: R$</h4>
         <button class="btn" v-on:click="nextStep()">Avançar</button>
       </div>
     </div>
@@ -11,12 +11,17 @@
 
 <script lang='ts'>
 import { defineComponent } from "@vue/composition-api";
+import mockData from "../../services/api/mockData";
 
 export default defineComponent({
   name: "Index",
+  props:{
+    item: {}
+  },
   data() {
     return {
       showNavBottom: false,
+      items: mockData.rateTable,
     };
   },
   methods: {

@@ -4,16 +4,16 @@
     <div class="value">
       <h1>{{ subtitle }}</h1>
       <div class="control">
-        <input class="input" type="text" placeholder="R$0,00" v-model="value" />
-        <button class="btn" v-on:click="handleCalculate()">Calcular</button>
+        <input class="input" type="text" placeholder="R$0,00" v-model="value"/>
+        <button class="btn" v-on:click="handleCalculate()" >Calcular</button>
       </div>
 
       <div class="table" v-if="showTable">
-        <Table />
+        <Table @inputChanged="selectItem" :itemId="itemSelected.id"/>
       </div>
 
       <div class="navbar-bottom">
-        <NavbarBottom />
+        <NavbarBottom v-if="itemSelected.id" :item="itemSelected" />
       </div>
     </div>
   </div>
@@ -38,6 +38,8 @@ export default defineComponent({
     return {
       showTable: false,
       value: 0,
+      checkedValue: false,
+      itemSelected: {}
     }
   },
   methods: {
@@ -54,6 +56,14 @@ export default defineComponent({
 
       this.showTable = true;
     },
+    tableValue (checkedValue:boolean) {
+      this.checkedValue = checkedValue;
+      console.log(checkedValue)
+    },
+    selectItem (item:any) {
+      this.itemSelected = item;
+      console.log(item)
+    }
   },
 });
 </script>
