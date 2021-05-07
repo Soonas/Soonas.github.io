@@ -4,6 +4,7 @@
       <div class="content-info" >
         <h4>Nome: {{item.name}} &nbsp;Parcelas: &nbsp;Valor Parcela: R$</h4>
         <button class="btn" v-on:click="nextStep()">Avançar</button>
+        // continuar
       </div>
     </div>
   </div>
