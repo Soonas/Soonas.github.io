@@ -11,7 +11,7 @@
       <thead>
         <tr>
           <th>
-            <input type="radio" name="radio" v-on:change="x(item)" />
+            <input type="radio" name="radio" v-on:change="changeTable(item)"/>
           </th>
           <th colspan="8">Tabela Padrão</th>
         </tr>
@@ -27,7 +27,7 @@
 
       <tbody>
         <tr class="active-row" v-for="row in item.installments" :key="row.id">
-          <td>{{ row.installments }}</td>
+          <td >{{ row.installments }}</td>
           <td>R$ {{ row.installmentInterest }}</td>
           <td>R$ {{ row.installmentValue }}</td>
           <td>R$ {{ row.fullValue }}</td>
@@ -52,7 +52,7 @@ export default defineComponent({
     };
   },
   methods: {
-    x: function (item) {
+    changeTable: function (item) {
       this.$emit("inputChanged", item);
     },
   },

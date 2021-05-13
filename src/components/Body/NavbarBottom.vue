@@ -1,9 +1,9 @@
 <template>
   <div class="content">
     <div class="bottomnav">
-      <div class="content-info" >
-        <h4>Nome: {{item.name}} &nbsp;Parcelas: &nbsp;Valor Parcela: R$</h4>
-        <button class="btn" v-on:click="nextStep()">Avançar</button>
+      <div class="content-info" v-for="row in item.installments" :key="row.id">
+        <h4>Nome: {{item.name}} &nbsp;Parcelas: {{row.installments}} &nbsp;Valor Parcela: R$</h4>
+        <button class="btn" v-on:click="nextStep()" >Avançar</button>
       </div>
     </div>
   </div>

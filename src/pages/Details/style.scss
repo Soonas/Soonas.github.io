@@ -1,1 +1,15 @@
 @import '@/assets/scss/_main';
+
+.content {
+    width: 100%;
+    height: 100%;
+    .sis {
+        background-color: red;
+        .value {
+            background-color: #eee;
+        }
+        .card {
+            background-color: orchid;
+        }
+    }
+}
