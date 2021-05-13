@@ -1,6 +1,32 @@
 <template>
   <div class="details">
     <Title title="Detalhe de Solicitação" />
+    <div class="content">
+      <div class="sis">
+        <p>Solicitação gerada por</p>
+        <div class="value">
+          <div class="total">
+            R$6.000,00
+          </div>
+          <div class="depositar">
+            R$6.000,00
+          </div>
+        </div>
+        <div class="card">
+          <div class="front">
+            Ver Comprovante
+          </div>
+          <div class="back">
+            Ver Comprovante
+          </div>
+          <div class="self-card">
+            Ver Comprovante
+          </div>
+        </div>
+      </div>
+      <div class="manual">
+      </div>
+    </div>
   </div>
 </template>
 

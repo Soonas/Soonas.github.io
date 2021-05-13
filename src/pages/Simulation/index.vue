@@ -9,7 +9,7 @@
       </div>
 
       <div class="table" v-if="showTable">
-        <Table @inputChanged="selectItem" :itemId="itemSelected.id"/>
+        <Table @inputChanged="selectItem" :itemId="itemSelected.id" />
       </div>
 
       <div class="navbar-bottom">
@@ -63,6 +63,9 @@ export default defineComponent({
     selectItem (item:any) {
       this.itemSelected = item;
       console.log(item)
+    },
+    selectItemTable () {
+      // seleciona item de uma tabela;
     }
   },
 });
