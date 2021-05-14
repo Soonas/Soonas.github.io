@@ -25,6 +25,15 @@
         </div>
       </div>
       <div class="manual">
+        <div class="modalidade">
+          <p>cartão crédito</p>
+        </div>
+        <div class="infoCli">
+          <p>name</p>
+        </div>
+        <div class="infoGeral">
+          <p>Data</p>
+        </div>
       </div>
     </div>
   </div>
