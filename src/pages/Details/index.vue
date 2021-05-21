@@ -3,24 +3,24 @@
     <Title title="Detalhe de Solicitação" />
     <div class="content">
       <div class="sis">
-        <p>Solicitação gerada por</p>
+        <p>Solicitação gerada por Sistema Credfica</p>
         <div class="value">
           <div class="total">
-            R$6.000,00
+            Valor Total R$6.000,00
           </div>
           <div class="depositar">
-            R$6.000,00
+            Valor Total R$6.000,00
           </div>
         </div>
         <div class="card">
           <div class="front">
-            Ver Comprovante
+            Frente do cartão Ver Comprovante
           </div>
           <div class="back">
-            Ver Comprovante
+            Verso do cartão Ver Comprovante
           </div>
           <div class="self-card">
-            Ver Comprovante
+            Selfie com cartão Ver Comprovante
           </div>
         </div>
       </div>
